@@ -21,22 +21,8 @@ class Main extends React.Component {
   }
   render() {
     return (
-      <div>
-      {this.state.loggedIn} ?
         <div>
-        <Main name={this.state.name} />
-
-        </div>
-        :
-        <div>
-        <h1> Monopoly Game! </h1>
-        <div>
-        <p>Enter your name below to get started </p>
-        </div>
-        <div className="form-group">
-        <Input value={this.state.name} onChange={(e)=> this.handleName(e)} className="form-control" placeholder="Your name"></Input>
-        </div>
-        <Button className="center-block" variant="contained" color="primary">Join Game</Button>
+        <h1> Main!!! </h1>
         </div>
       );
     }
