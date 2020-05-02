@@ -12,7 +12,9 @@ class HomePage extends React.Component {
     this.state = {
       hello: true,
       name: "",
-      gameState: {},
+      gameState: {
+        ir: 1
+      },
       gameStarted: false,
     }
   }
@@ -20,6 +22,15 @@ class HomePage extends React.Component {
   handleName = (e) => {
     this.setState({
       name: e.target.value
+    })
+  }
+
+  set_ir = (e) => {
+    const min = 1;
+    const max = 10;
+    const rand = min + Math.random() * (max - min);
+    this.setState({
+      ir: rand
     })
   }
 
