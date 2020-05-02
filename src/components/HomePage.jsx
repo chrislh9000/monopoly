@@ -13,7 +13,8 @@ class HomePage extends React.Component {
       hello: true,
       name: "",
       gameState: {
-        ir: 1
+        ir: 1,
+        tbc: 10
       },
       gameStarted: false,
     }
@@ -32,6 +33,16 @@ class HomePage extends React.Component {
     this.setState({
       ir: rand
     })
+  }
+
+  set_tbc = (e) => {
+    const min = 10;
+    const max = 20;
+    const rand = min + Math.random() * (max - min);
+    this.setState({
+      tbc: rand
+    })
+    console.log(this.state.tbc)
   }
 
   startGame = (e) => {
@@ -85,6 +96,10 @@ class HomePage extends React.Component {
 
         <div>
         <Button onClick = {(e) => this.set_ir(e)} className="center-block" variant="contained" color="primary">Set Interest Rate</Button>
+        </div>
+
+        <div>
+        <Button onClick = {(e) => this.set_tbc(e)} className="center-block" variant="contained" color="primary">Set tbc Rate</Button>
         </div>
 
         </div>}
