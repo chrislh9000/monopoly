@@ -10,12 +10,26 @@ class HomePage extends React.Component {
     super(props)
     this.state = {
       hello: true,
+      name: "",
     }
+  }
+
+  handleName = (e) => {
+    this.setState({
+      name: e.target.value
+    })
   }
   render() {
     return (
       <div>
-      <p> HEY </p>
+      <h1> Monopoly Game! </h1>
+      <div>
+      <p>Enter your name below to get started </p>
+      </div>
+      <div className="form-group">
+      <Input value={this.state.name} onChange={(e)=> this.handleName(e)} className="form-control" placeholder="Your name"></Input>
+      </div>
+      <Button className="center-block" variant="contained" color="primary">Join Game</Button>
       </div>
     );
   }
