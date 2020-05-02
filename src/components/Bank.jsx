@@ -5,13 +5,11 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl'
 import Input from '@material-ui/core/Input'
 
-class Main extends React.Component {
+class Bank extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      gameState: {
-        players:['Chris',  'Arjun', 'Noah'],
-      },
+      gameState: {},
     }
   }
 
@@ -29,4 +27,4 @@ class Main extends React.Component {
     }
   }
 
-  export default Main
+  export default Bank

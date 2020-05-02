@@ -27,9 +27,15 @@ class HomePage extends React.Component {
     this.setState({
       gameStarted: true,
     })
-
-    console.log('Penis')
   }
+
+  endGame = (e) => {
+    this.setState({
+      gameStarted: false,
+    })
+  }
+
+
 
   // addUser = (name) = {
   //   this.setaState({
@@ -46,6 +52,7 @@ class HomePage extends React.Component {
       {this.state.gameStarted ?
         <div>
         <Main />
+        <Button onClick = {(e) => this.endGame(e)} className="center-block" variant="contained" color="primary">End Game</Button>
         </div>
         :
         <div>
@@ -63,6 +70,10 @@ class HomePage extends React.Component {
 
         <div>
         <Button onClick = {(e) => this.startGame(e)} className="center-block" variant="contained" color="primary">Start Game</Button>
+        </div>
+
+        <div>
+        <Button onClick = {(e) => this.set_ir(e)} className="center-block" variant="contained" color="primary">Set Interest Rate</Button>
         </div>
 
         </div>}
